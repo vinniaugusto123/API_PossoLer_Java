@@ -15,7 +15,17 @@ public class EndpointsConfig {
     private Environment environment;
 
     @Bean
-    public List<String> getEndpointsFromEnviroment() {
+    public List<String> getPublicEndpoints() {
+        var whiteList = new ArrayList<String>();
+        whiteList.add("/**");
+
+        var scope = environment.getProperty("SCOPE");
+        return (scope == null)
+            ? getEndpointsFromEnvironment()
+            : whiteList;
+    }
+
+    private List<String> getEndpointsFromEnvironment() {
         List<String> endpoints = new ArrayList<>();
 
         endpoints.add(environment.getProperty("core-api.endpoint.increment-download"));

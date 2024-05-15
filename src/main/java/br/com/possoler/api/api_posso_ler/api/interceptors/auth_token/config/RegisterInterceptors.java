@@ -16,7 +16,7 @@ public class RegisterInterceptors implements WebMvcConfigurer {
 
     RegisterInterceptors(AuthTokenService authTokenService, EndpointsConfig endpointsConfig) {
         this.authTokenService = authTokenService;
-        endpoints = endpointsConfig.getEndpointsFromEnviroment();
+        endpoints = endpointsConfig.getPublicEndpoints();
     }
 
     @Override

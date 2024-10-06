@@ -22,7 +22,7 @@ public class RegisterInterceptors implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new AuthTokenInterceptor(authTokenService))
-            .excludePathPatterns(endpoints); // A função .excludePathPatterns() define um pattern de url em que a interceptação não será feita
+            .addPathPatterns(endpoints); // A função .excludePathPatterns() define um pattern de url em que a interceptação não será feita
     }
 
 

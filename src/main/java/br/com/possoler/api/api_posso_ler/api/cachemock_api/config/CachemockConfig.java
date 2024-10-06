@@ -14,10 +14,7 @@ public class CachemockConfig {
 
     @Bean
     public String setFilePath() {
-        var scope = environment.getProperty("SCOPE");
-        return (scope == null)
-            ? System.getProperty("user.dir") + PathConstants.FOLDER_POSSOLER_INTEGRATOR + "/cachemock/jsonFiles/"
-            : System.getProperty("user.dir") + "\\src\\main\\resources\\cachemock\\jsonFiles\\";
+        return System.getProperty("user.dir") + "\\src\\main\\resources\\cachemock\\jsonFiles\\";
     }
 
     @Bean

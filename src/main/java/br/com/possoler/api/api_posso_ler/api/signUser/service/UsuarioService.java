@@ -1,6 +1,5 @@
 package br.com.possoler.api.api_posso_ler.api.signUser.service;
 
-import br.com.possoler.api.api_posso_ler.api.core_api.service.DownloadService;
 import br.com.possoler.api.api_posso_ler.api.signUser.model.Usuario;
 import br.com.possoler.api.api_posso_ler.api.signUser.repository.UsuarioRepository;
 import exceptions.NotFoundException;

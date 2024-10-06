@@ -1,6 +1,5 @@
 package br.com.possoler.api.api_posso_ler.api.signUser.service;
 
-import br.com.possoler.api.api_posso_ler.api.core_api.service.DownloadService;
 import lombok.Getter;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;

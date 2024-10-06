@@ -9,14 +9,8 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class PaywallDOMConfig {
 
-    @Autowired
-    private Environment environment;
-
     @Bean
     public String setFilepath() {
-        var scope = environment.getProperty("SCOPE");
-        return (scope == null)
-            ? System.getProperty("user.dir") + PathConstants.FOLDER_POSSOLER_INTEGRATOR + "/paywallDOM/configFiles/"
-            : System.getProperty("user.dir") + "\\src\\main\\resources\\paywallDOM\\configFiles\\";
+        return System.getProperty("user.dir") + "\\src\\main\\resources\\paywallDOM\\configFiles\\";
     }
 }
